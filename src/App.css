@@ -1,0 +1,229 @@
+body {
+  background-color: #faf8f8;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  background-color: #0c0f0f;
+  margin-bottom: 20px;
+}
+
+.loadBox {
+  display: flex;
+  align-items: center;
+  grid-gap:  10px;
+}
+
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: #4a5d89;
+	height: 32px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.input-file input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover/active */
+.input-file:hover span {
+	background-color: #59be6e;
+}
+.input-file:active span {
+	background-color: #2E703A;
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
+
+
+
+
+
+.headerBtn {
+  border: 0;
+  background-color: #fff;
+  height: 30px;
+  border-radius: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toolbar {
+  display: flex;
+  grid-gap: 5px;
+}
+
+.toolbar-button {
+  width: 40px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #282c34;
+  color: #fff;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #51555b;
+}
+
+.toolbar-button img {
+  width: 20px;
+  filter: invert();
+}
+
+
+
+.canvas-mainInfoBox {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.canvas-box {
+  max-width: 70%;
+  height: 600px;
+
+  overflow: auto;
+  background-color: #ccc;
+}
+
+.canvas-hand {
+  cursor: grab;
+}
+
+.canvas-hand_grabbing {
+  cursor: grabbing;
+}
+
+.canvas-pipette {
+  cursor: url('./image/pipette20.png'), auto;
+}
+
+.info-panel {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #ccc;
+}
+
+.info-panel p {
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-panel button, .dialig-btn {
+ margin-bottom: 10px;
+ margin-right: 5px;
+}
+
+.color-info {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+  flex-direction: row-reverse;
+}
+
+.color-panel {
+  margin-left: 10%;
+  display: flex;
+  grid-gap: 40px;
+  margin: 20px 0px;
+  margin-left: 10%;
+}
+
+.panel-info {
+  background-color: #fff;
+  box-shadow: 0 0 1px #ccc;
+  padding: 30px;
+  padding-top: 0px;
+}
+
+.color-swatch {
+  width: 100%;
+  height: 32px;
+  border-radius: 2px;
+}
+
+.color-result {
+  background-color: #fff;
+  box-shadow: 0 0 1px #ccc;
+  padding: 0 30px;
+  padding-bottom: 20px;
+  height: min-content;
+}
+
+.color-result button, .info-panel button, .dialig-btn {
+  background-color: transparent;
+  border: 1px solid #0c0f0f;
+  border-radius: 2px;
+  padding: 5px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.color-result button:hover, .info-panel button:hover, .dialig-btn:hover {
+  background-color: #0c0f0f;
+  color: #fff;
+}
+
+.dialog {
+  background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    cursor: pointer;
+    /* указываем z-индекс для корректного наслаивания */
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-content {
+  background-color: #fff;
+  width: fit-content;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.dialog-elem {
+  margin-bottom: 10px;
+}
