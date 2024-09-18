@@ -77,6 +77,7 @@ body {
   border-radius: 2px;
   font-weight: 600;
   cursor: pointer;
+  padding: 5px 10px;
 }
 
 .toolbar {
@@ -139,6 +140,10 @@ body {
   padding: 50px;
   border-radius: 5px;
   box-shadow: 0 0 1px #ccc;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
 }
 
 .info-panel p {
@@ -160,32 +165,66 @@ body {
 }
 
 .color-panel {
-  margin-left: 10%;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  /* margin-left: 10%; */
   display: flex;
+  justify-content: space-around;
   grid-gap: 40px;
-  margin: 20px 0px;
-  margin-left: 10%;
+  /* margin: 20px 0px; */
+  /* margin-left: 10%; */
+  background-color: #0c0f0fd1;
+  color: #fff;
+  /* padding: 10px; */
+  padding-left: 10px;
+
 }
 
 .panel-info {
-  background-color: #fff;
-  box-shadow: 0 0 1px #ccc;
-  padding: 30px;
-  padding-top: 0px;
+  /* background-color: #fff; */
+  /* box-shadow: 0 0 1px #ccc; */
+  /* padding: 30px;
+  padding-top: 0px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
 }
 
 .color-swatch {
-  width: 100%;
+  width: 32px;
   height: 32px;
   border-radius: 2px;
+  margin-right: 10px;
+}
+
+.color-infobox {
+  display: flex;
+  grid-gap: 5px;
+  margin-left: 10px;
+}
+
+.color-infobox p {
+  text-align: center;
 }
 
 .color-result {
-  background-color: #fff;
-  box-shadow: 0 0 1px #ccc;
-  padding: 0 30px;
+  /* background-color: #fff; */
+  /* box-shadow: 0 0 1px #ccc; */
+  /* padding: 0 30px;
   padding-bottom: 20px;
-  height: min-content;
+  height: min-content; */
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.contrast {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
 }
 
 .color-result button, .info-panel button, .dialig-btn {
@@ -201,6 +240,17 @@ body {
 .color-result button:hover, .info-panel button:hover, .dialig-btn:hover {
   background-color: #0c0f0f;
   color: #fff;
+}
+
+
+.color-result button {
+  background-color: #7083a8;
+  color: #fff;
+  font-size: 12px;
+  padding: 0;
+  height: 35px;
+  padding: 10px 15px;
+  border: 0;
 }
 
 .dialog {

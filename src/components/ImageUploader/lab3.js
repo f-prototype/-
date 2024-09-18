@@ -491,8 +491,10 @@ function ImageUploader() {
                     onChange={handleScaleChange}
                     />
                     </p>
+                    <div>
                     <button onClick={() => setShowDialog(true)}>Изменить размер</button>
                     <button onClick={handleSaveImage}>Сохранить</button>
+                    </div>
                 </div>
             </div>
          
@@ -501,28 +503,36 @@ function ImageUploader() {
           {showColorPanel && (
             <div className="color-panel">
               <div className='panel-info'>
-                <h3>Цвет 1:</h3>
+                {/* <h3>Цвет 1:</h3> */}
                 {color1 && (
                   <>
                     <div className="color-swatch" style={{ backgroundColor: color1.rgb }} />
-                    <p>X: {Math.round(color1.x)}</p>
-                    <p>Y: {Math.round(color1.y)}</p>
-                    <p>RGB: {color1.rgb}</p>
-                    <p>XYZ: ({color1.xyz.X.toFixed(2)}, {color1.xyz.Y.toFixed(2)}, {color1.xyz.Z.toFixed(2)})</p>
-                    <p>Lab: ({color1.lab.L.toFixed(2)}, {color1.lab.a.toFixed(2)}, {color1.lab.b.toFixed(2)})</p>
+                    <div>
+                      <p>X: {Math.round(color1.x)}</p>
+                      <p>Y: {Math.round(color1.y)}</p>
+                    </div>
+                    <div className='color-infobox'>
+                      <p>RGB: <br/> {color1.rgb.slice(3)}</p>
+                      <p>XYZ: <br/> ({color1.xyz.X.toFixed(2)}, {color1.xyz.Y.toFixed(2)}, {color1.xyz.Z.toFixed(2)})</p>
+                      <p>Lab: <br/> ({color1.lab.L.toFixed(2)}, {color1.lab.a.toFixed(2)}, {color1.lab.b.toFixed(2)})</p>
+                    </div>
                   </>
                 )}
               </div>
               <div className='panel-info'>
-                <h3>Цвет 2:</h3>
+                {/* <h3>Цвет 2:</h3> */}
                 {color2 && (
                   <>
                     <div className="color-swatch" style={{ backgroundColor: color2.rgb }} />
+                    <div>
                     <p>X: {Math.round(color2.x)}</p>
                     <p>Y: {Math.round(color2.y)}</p>
-                    <p>RGB: {color2.rgb}</p>
-                    <p>XYZ: ({color2.xyz.X.toFixed(2)}, {color2.xyz.Y.toFixed(2)}, {color2.xyz.Z.toFixed(2)})</p>
-                    <p>Lab: ({color2.lab.L.toFixed(2)}, {color2.lab.a.toFixed(2)}, {color2.lab.b.toFixed(2)})</p>
+                    </div>
+                    <div className='color-infobox'>
+                    <p>RGB: <br/> {color2.rgb.slice(3)}</p>
+                    <p>XYZ: <br/> ({color2.xyz.X.toFixed(2)}, {color2.xyz.Y.toFixed(2)}, {color2.xyz.Z.toFixed(2)})</p>
+                    <p>Lab: <br/> ({color2.lab.L.toFixed(2)}, {color2.lab.a.toFixed(2)}, {color2.lab.b.toFixed(2)})</p>
+                    </div>
                   </>
                 )}
               </div>
